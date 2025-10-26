@@ -1,7 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ShoppingCart, User, MapPin, Menu } from "lucide-react";
+import { User, MapPin, Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Cart } from "@/components/Cart";
 
 const Navigation = () => {
   const location = useLocation();
@@ -45,9 +46,7 @@ const Navigation = () => {
             <Button variant="ghost" size="icon">
               <MapPin className="h-5 w-5" />
             </Button>
-            <Button variant="ghost" size="icon">
-              <ShoppingCart className="h-5 w-5" />
-            </Button>
+            <Cart />
             <Button variant="ghost" size="icon">
               <User className="h-5 w-5" />
             </Button>
