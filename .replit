@@ -9,3 +9,14 @@ channel = "stable-25_05"
 deploymentTarget = "autoscale"
 run = ["npm", "run", "start"]
 build = ["npm", "run", "build"]
+
+[workflows]
+
+[[workflows.workflow]]
+name = "Build for GitHub Pages"
+author = 49037509
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm run build"
